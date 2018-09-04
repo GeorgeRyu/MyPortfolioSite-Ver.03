@@ -24,7 +24,6 @@
     </footer>
     
 <!-- SCROLL MAGIC -->
-	<script src="./dist/bundle.js"></script>
 
 </body>
 
