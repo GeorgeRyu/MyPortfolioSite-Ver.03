@@ -1,3 +1,6 @@
+// NODE MODULES
+import {ScrollMagic} from "scrollmagic/scrollmagic/uncompressed/ScrollMagic";
+
 export default function() {
     (function($) {
 

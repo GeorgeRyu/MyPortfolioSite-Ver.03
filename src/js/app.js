@@ -6,5 +6,10 @@ import {TweenMax} from "gsap/TweenMax";
 import {ScrollMagic} from "scrollmagic/scrollmagic/uncompressed/ScrollMagic";
 
 // MODULES
-import "./modules/front-page-animation";
+import frontPageAnimation from "./modules/frontPageAnimation";
 import sub from "./modules/sub";
+
+(function($) {
+    frontPageAnimation();
+    sub();
+})(jQuery);
