@@ -21,10 +21,10 @@
 		</div>
 
 		<p class="copyright">© 2017. the work of Ryu takahashi</p>
+
+		<?php wp_footer(); ?>
     </footer>
     
-<!-- SCROLL MAGIC -->
-
 </body>
 
 </html>

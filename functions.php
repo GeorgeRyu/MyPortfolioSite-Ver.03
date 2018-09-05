@@ -45,14 +45,14 @@
     $dir = get_template_directory_uri(). '/dist';
  
     //CSS
-    wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.0.0', 'all');
+    // wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.0.0', 'all');
+    wp_enqueue_style( 'style', $dir. '/style.css', array(), '1.0.0', 'all');
 
     // add google fonts
-    wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Yellowtail', array(''), '1.0.0', 'all');
+    wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Lato:300,300i,900|Yesteryear', array(''), '1.0.0', 'all');
 
     //JS
-
-    wp_enqueue_script( 'script', $dir . '/bundle.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'script', $dir. '/bundle.js', array('jquery'), '1.0.0', true );
      
     }
     add_action( 'wp_enqueue_scripts', 'my_scripts' );

@@ -1,5 +1,5 @@
 // SASS
-import style from "./app.scss";
+import style from "../sass/app.scss";
 
 // NODE MODULES
 import {TweenMax} from "gsap/TweenMax";

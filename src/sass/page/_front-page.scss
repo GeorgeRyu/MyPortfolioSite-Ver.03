@@ -1,0 +1,594 @@
+
+.main-view {
+	position: relative;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+
+	.senter-object {
+		position: fixed;
+		width: auto;
+		top: 35vh;
+	    left: calc(50% - 604px/2);
+		text-align: left;
+		opacity: 1;
+		transition: all .6s ease;
+
+		.greetig-1 {
+			position: absolute;
+			left: 210px;
+			font-size: 12rem;
+			text-align: right;
+			color: #DFE1EA;
+			opacity: 0;
+			@include prefix-transform(translateX(-60px) translateY(20px));
+		}
+
+		.main-text {
+			position: relative;
+			text-align: left;
+			z-index: 2;
+
+			.my-name {
+				width: 100%;
+
+				.first-name,
+				.last-name {
+					font-size: 12rem;
+					line-height: 10rem;
+					letter-spacing: -1.7rem;
+					color: $yellow;
+
+					.ryu,
+					.taka {
+						display: inline-flex;
+						width: 9rem;
+						overflow: hidden;
+
+						.ch {
+							@include prefix-transform(translateX(-90px));
+						}
+					}
+				}
+
+				.first-name {
+					@include prefix-transform(translateX(-6px));
+
+						.ryu {
+
+						&:nth-child(2) {
+							@include prefix-transform(translateX(-30px))
+						}
+						&:nth-child(3) {
+							@include prefix-transform(translateX(-52px))
+						}
+					}
+				}
+
+
+				.last-name > .taka {
+					&:nth-child(2) {
+						@include prefix-transform(translateX(-40px))
+					}
+					&:nth-child(3) {
+						@include prefix-transform(translateX(-58px))
+					}
+					&:nth-child(4) {
+						@include prefix-transform(translateX(-78px))
+					}
+					&:nth-child(5) {
+						@include prefix-transform(translateX(-96px))
+					}
+					&:nth-child(6) {
+						@include prefix-transform(translateX(-112px))
+					}
+					&:nth-child(7) {
+						@include prefix-transform(translateX(-132px))
+					}
+					&:nth-child(8) {
+						@include prefix-transform(translateX(-173px))
+					}
+					&:nth-child(9) {
+						@include prefix-transform(translateX(-186px))
+					}
+				}
+			}
+
+			.my-job {
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+				font-size: 2.4rem;
+				color: $yellow;
+
+				.rectangle-job {
+					position: absolute;
+					display: block;
+					height: 100%;
+					width: 0%;
+					top: 0;
+					left: 0;
+					right: auto;
+					background-color: $yellow;
+				}
+
+				.text-job {
+					display: block;
+					opacity: 0;
+					/*@include prefix-transform(translateY(-30px));*/
+				}
+			}
+		}
+	}
+
+	.scroll {
+		position: fixed;
+		display: block;
+		height: 80px;
+		bottom: 0;
+	    left: calc(50% - 54px/2);
+	    opacity: 0;
+		transition: all .6s ease;
+
+		p {
+			margin-top: 24px;
+			font-size: 1rem;
+			color: $yellow;
+			transition: all .6s ease;
+		}
+
+		.line-scroll {
+			position: absolute;
+			display: inline-block;
+			width: 2px;
+			height: 100%;
+			top: 0;
+			overflow: hidden;
+
+			&:before {
+			    content: "";
+			    display: block;
+			    position: absolute;
+			    width: 100%;
+			    height: 100%;
+			    top: 0px;
+			    left: 0px;
+			    background-color: $yellow;
+			    animation: rotation 2s cubic-bezier(0.66, 0.01, 0.29, 1.01) 0s infinite normal running;
+			}
+
+			@keyframes rotation {
+				0% {
+					@include prefix-transform(translateY(-80px))
+				}
+				100% {
+					@include prefix-transform(translateY(80px))
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.work-area {
+    width: 100%;
+    padding-top: 400px;
+	overflow: hidden;
+
+    .inner {
+		width: 76%;
+		margin: 0 auto;
+
+		.teaser {
+			display: block;
+			width: 100%;
+			margin-bottom: 60%;
+
+			figure {
+				position: relative;
+				width: 70%;
+				z-index: 0;
+
+				a {
+					position: relative;
+					display: inline-block;
+					width: 100%;
+					height: 0rem;
+					overflow: hidden;
+					transition: all .6s ease;
+
+					.darkblue {
+						display: block;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						right: 0;
+						left: 0;
+						background: rgba(2, 17, 75, 0.6);
+						z-index: 1;
+						transition: all .6s ease;
+					}
+
+					&:hover > img {
+						filter: grayscale(0);
+					}
+
+					&:hover > .darkblue {
+						opacity: 0;
+					}
+
+					&:hover + .rec {
+						opacity: 0;
+						filter: blur(20px);
+					}
+
+					&:hover {
+						box-shadow: 8px 8px 60px rgba(0, 0, 0, 0.15);
+					}
+
+					img {
+						position: absolute;
+						opacity: 1;
+						top: 0;
+						width: 100%;
+						filter: grayscale(100%);
+						@include prefix-transform(scale(1.2));
+						transition: filter 1s ease;
+					}
+				}
+
+				.rec {
+					opacity: 1;
+					transition: all 1s ease;
+				}
+
+				.rectangle-01 {
+					width: 60%;
+					height: 0%;
+					background: $yellow;
+					position: absolute;
+					right: -12%;
+					top: 10px;
+					z-index: -1;
+				}
+
+				.rectangle-02 {
+					width: 40%;
+					height: 0%;
+					background: $yellow;
+					position: absolute;
+					left: -6%;
+					top: 300px;
+					z-index: -1;
+				}
+
+				.rectangle-03 {
+					width: 40%;
+					height: 0%;
+					background: $yellow;
+					position: absolute;
+					left: 46%;
+					top: -60px;
+					z-index: -1;
+				}
+			}
+
+			.teaser-ditail {
+				position: relative;
+				display: inline-block;
+				width: 30%;
+
+				.type,
+				.title-work,
+				.explan-s {
+					opacity: 0;
+					@include prefix-transform(translateX(16px));
+				}
+
+				.link-work-sp {
+					display: none;
+				}
+
+				h3 {
+					position: relative;
+				}
+			}
+		}
+
+		.right {
+
+			figure {
+				float: right;
+			}
+
+			.teaser-ditail {
+				text-align: right;
+				padding-right: 2%;
+
+				.title-work {
+
+					&.stretch {
+
+						&:after {
+							width: 60%;
+						}
+					}
+
+					&:after {
+						position: absolute;
+						content: '';
+						display: block;
+						width: 0;
+						height: 2px;
+						bottom: -4px;
+						right: -20%;
+						background-color: $yellow;
+						transition: all .6s ease;
+					}
+				}
+			}
+		}
+
+		.teaser.left {
+
+			figure {
+				float: left;
+			}
+
+			.teaser-ditail {
+				text-align: left;
+				padding-left: 2%;
+
+				.type,
+				.title-work,
+				.explan-s {
+					opacity: 0;
+					@include prefix-transform(translateX(-16px));
+				}
+
+				.title-work {
+
+					&.stretch {
+
+						&:after {
+							width: 60%;
+						}
+					}
+
+					&:after {
+						position: absolute;
+						content: '';
+						display: block;
+						width: 0;
+						height: 2px;
+						bottom: -4px;
+						left: -20%;
+						background-color: $yellow;
+						transition: all .6s ease;
+					}
+				}
+			}
+		}
+    }
+}
+
+
+
+@include middle {
+	.main-view {
+		#senter-object {
+
+			.greetig-1 {
+			    left: 196px;
+			}
+
+			.main-text {
+				.my-name {
+					.first-name,
+					.last-name {
+						font-size: 11rem;
+						line-height: 9rem;
+						letter-spacing: -4rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+@include phone {
+
+	.main-view {
+
+		.senter-object {
+			top: 45vh;
+			position: absolute;
+			left: 0;
+			width: 100%;
+			padding-left: 6%;
+
+			.greetig-1 {
+				left: -2%;
+				right: -2%;
+				top: -26%;
+				font-size: 33vw;
+				color: #efefef;
+			}
+
+			.main-text {
+				.my-name {
+
+					.first-name,
+					.last-name {
+						width: 100%;
+						font-size: 14vw;
+						line-height: 12vw;
+						letter-spacing: -8vw;
+
+						.ryu,
+						.taka {
+							width: 0%;
+
+							.ch {
+								display: block;
+								width: 100%;
+								@include prefix-transform(translateX(0));
+							}
+						}
+					}
+
+					.first-name {
+						@include prefix-transform(translateX(-2px));
+
+						.ryu {
+
+							&:nth-child(2) {
+								@include prefix-transform(translateX(11px));
+							}
+							&:nth-child(3) {
+								@include prefix-transform(translateX(25px));
+							}
+						}
+					}
+
+					.last-name > .taka {
+						&:nth-child(2) {
+							@include prefix-transform(translateX(7px));
+						}
+						&:nth-child(3) {
+							@include prefix-transform(translateX(24px));
+						}
+						&:nth-child(4) {
+							@include prefix-transform(translateX(38px));
+						}
+						&:nth-child(5) {
+							@include prefix-transform(translateX(54px));
+						}
+						&:nth-child(6) {
+							@include prefix-transform(translateX(70px));
+						}
+						&:nth-child(7) {
+							@include prefix-transform(translateX(86px));
+						}
+						&:nth-child(8) {
+							@include prefix-transform(translateX(94px));
+						}
+						&:nth-child(9) {
+							@include prefix-transform(translateX(112px));
+						}
+					}
+				}
+
+				.my-job {
+					font-size: 5vw;
+					line-height: 6vw;
+				}
+			}
+		}
+
+		#scroll {
+			position: absolute;
+		}
+	}
+
+
+
+	#work {
+		padding-top: 200px;
+
+		.inner {
+			width: 88%;
+
+
+			.teaser {
+				margin-bottom: 200px;
+				background-color: #fafafa;
+			    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.00);
+
+				figure {
+					float: none;
+					margin-bottom: 24px;
+					width: 100%;
+					overflow: hidden;
+
+					a {
+					    height: 240px;
+
+						.darkblue {
+							display: none;
+						}
+
+					    img {
+				    	opacity: 0;
+							filter: none;
+							transform: translateX(-10%);
+							@include prefix-transform(scale(1));
+					    }
+					}
+
+					.rec {
+						width: 100%;
+						height: 100%;
+						top: 0;
+						right: 0;
+						left: 0;
+						bottom: 0;
+						z-index: 1;
+						display: block;
+    					transform: translateX(-140%) scale(1) skewX(40deg);
+    					}
+				}
+
+				.teaser-ditail {
+					width: 100%;
+					padding: 0 16px 24px;
+					text-align: left;
+
+					.type,
+					.title-work,
+					.explan-s {
+						@include prefix-transform(translateX(-16px));
+
+						&:after {
+							display: none;
+						}
+					}
+
+					.link-work-sp {
+						display: block;
+						position: absolute;
+						top: -42px;
+						right: -8px;
+						padding: 8px 32px;
+						overflow: hidden;
+
+						.text-link {
+							opacity: 0;
+							display: inline-block;
+							@include prefix-transform(translateX(-32px));
+							color: #ffffff;
+							position: relative;
+							z-index: 2;
+						}
+
+						.bg-link {
+							background-color: $yellow;
+							position: absolute;
+							top: 0;
+							left: 0;
+							height: 100%;
+							width: 100%;
+							@include prefix-transform(translateX(-140%) skewX(40deg));
+						}
+					}
+				}
+			}
+		}
+	}
+}
