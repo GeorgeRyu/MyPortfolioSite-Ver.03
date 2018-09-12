@@ -52,8 +52,13 @@
     wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Lato:300,300i,900|Yesteryear', array(''), '1.0.0', 'all');
 
     //JS
+    wp_enqueue_script( 'tweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js', array('jquery'), '1.18.2', true );
+    wp_enqueue_script( 'scrollMagicMin', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js', array('jquery'), '2.0.5', true );
+    wp_enqueue_script( 'animationGsap', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js', array('jquery'), '2.0.5', true );
+    wp_enqueue_script( 'debugAddIndicatorsMin', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js', array('jquery'), '2.0.5', true );
+
     wp_enqueue_script( 'script', $dir. '/bundle.js', array('jquery'), '1.0.0', true );
-     
+
     }
     add_action( 'wp_enqueue_scripts', 'my_scripts' );
  

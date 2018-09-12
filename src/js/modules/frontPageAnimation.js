@@ -1,5 +1,5 @@
 // NODE MODULES
-import {ScrollMagic} from "scrollmagic/scrollmagic/uncompressed/ScrollMagic";
+import * as ScrollMagic from 'ScrollMagic';
 
 export default function() {
     (function($) {
@@ -214,8 +214,8 @@ export default function() {
                 rac = $('.rectangle-job'),
                 job = $('.text-job'),
                 scroll = $('.scroll'),
-                gauge = $('#gauge');
-                tl = new TimelineLite({paused: false}),
+                gauge = $('#gauge'),
+                tl = new TimelineLite({paused: false});
     
             tl
                 .to(gauge, .6, {height: 0, ease:Power2.easeOut}, '+=.6')
