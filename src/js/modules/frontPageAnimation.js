@@ -1,5 +1,5 @@
 // NODE MODULES
-import * as ScrollMagic from 'ScrollMagic';
+// import * as ScrollMagic from 'ScrollMagic';
 
 export default function() {
     (function($) {

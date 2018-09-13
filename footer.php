@@ -1,3 +1,8 @@
+	<?php if(is_home() || is_front_page()): ?>
+		</div>
+	</section>
+	<?php endif ?>
+
 	<footer id="contact">
 
 		<div class="logo-bottom">
@@ -24,6 +29,12 @@
 
 
     </footer>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
+
 	<?php wp_footer(); ?>
 
 </body>
