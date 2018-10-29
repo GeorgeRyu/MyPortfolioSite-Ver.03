@@ -1,8 +1,11 @@
 <section class="main-view">
 		<div id="senter-object" class="senter-object">
-			<p class="greetig-1 yester">
-				Hi there!
-			</p>
+            <?php if( $greeting): ?> 
+            <p class="greetig-1 yester">
+                <?php echo $greeting; ?>    
+            </p>
+            <?php endif; ?>
+
 			<div class="main-text">
 				<div class="my-name">
 					<p class="first-name bold">
@@ -11,7 +14,6 @@
 						<span class="ryu"><span class="ch">U</span></span>
 					</p>
 					<p class="last-name bold">
-
 						<span class="taka"><span class="ch">T</span></span>
 						<span class="taka"><span class="ch">A</span></span>
 						<span class="taka"><span class="ch">K</span></span>
@@ -25,12 +27,14 @@
 				</div>
 				<p class="my-job" >
 					<span class="rectangle-job"></span>
-					<span class="text-job">Designer / Front-end Developer</span>
+					<span class="text-job">
+                        <?php echo $type_of_job; ?>
+                    </span>
 				</p>
 			</div>
 		</div>
 		<div id="scroll" class="scroll">
-			<p>MY WORK</p>
+			<p><?php echo $under_content; ?></p>
 			<div class="line-scroll">
 			</div>
 		</div>

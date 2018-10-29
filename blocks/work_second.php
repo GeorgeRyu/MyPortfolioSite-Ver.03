@@ -1,24 +1,26 @@
-<article class="teaser right">
+<article class="teaser left">
     <figure>
-        <a href="work01.html">
+        <a href="work02.html">
             <span class="darkblue"></span>
-            <img class="front-page-1" src="images/work_01.jpg" alt="work-images">
+            <img class="front-page-2" src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>">
         </a>
-        <div class="rec rectangle-01"></div>
+        <div class="rec rectangle-02"></div>
     </figure>
-    <div class="teaser-ditail work1">
-        <a class="link-work-sp" href="work01.html">
+    <div class="teaser-ditail work2">
+        <a class="link-work-sp" href="work02.html">
             <span class="text-link">More</span>
             <span class="bg-link"></span>
         </a>
-        <p class="type">Web site</p>
+        <p class="type">
+            <?php echo $category; ?>
+        </p>
         <br>
-        <h3 id="stretch1" class="title-work">
-            Vecter international shcool
+        <h3 id="stretch2" class="title-work">
+            <?php echo $title; ?>
         </h3>
         <br>
         <p class="explan-s">
-            Vector International Academy is a language school located in Vancouver, Canada. The majority of lecturers are long experienced Japanese who live overseas. Especially schools with a reputation by Japanese international students.
+            <?php echo $description; ?>
         </p>
     </div>
 </article>

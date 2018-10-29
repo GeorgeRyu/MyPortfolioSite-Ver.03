@@ -46,10 +46,10 @@
  
     //CSS
     // wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.0.0', 'all');
-    wp_enqueue_style( 'style', $dir. '/style.css', array(), '1.0.0', 'all');
+    wp_enqueue_style( 'style', $dir. '/style.css', array(), '1.0.0');
 
     // add google fonts
-    wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Lato:300,300i,900|Yesteryear', array(''), '1.0.0', 'all');
+    wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Lato:300,300i,900|Yesteryear', array(), '1.0.0');
 
     //JS
     wp_enqueue_script( 'tweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js', array('jquery'), '1.18.2', true );

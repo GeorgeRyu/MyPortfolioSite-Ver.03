@@ -30,9 +30,7 @@ export default function() {
         var	clientWidth = window.innerWidth;
     
         if(clientWidth < 768) {
-    
-    
-    
+
             // OPNING ANIMATION
                 var nav = $('.menu-content'),
                     hi = $('.greetig-1'),
@@ -199,13 +197,7 @@ export default function() {
     
         } else {
     
-                var	clientWidths = window.innerWidth;
-    
-                if(clientWidths < 768) {
-                    $('body').css('display', 'none');
-                    console.log('hello');
-                }
-    
+                var	clientWidths = window.innerWidth;    
     
         // OPNING ANIMATION
             var nav = $('.menu-content'),
@@ -459,5 +451,3 @@ export default function() {
     
     })(jQuery);
 }
-
-

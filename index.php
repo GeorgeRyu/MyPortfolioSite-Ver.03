@@ -11,29 +11,31 @@ if( have_rows('blocks') ):
         the_row();
 
         if( get_row_layout() == 'main_view' ):
-            $mainTitle1 = get_sub_field('main_copy1');
-            $mainTitle2 = get_sub_field('main_copy2');
-            $mainImages = get_sub_field('main_images');
+            $greeting = get_sub_field('greeting');
+            $type_of_job = get_sub_field('type_of_job');
+            $under_content = get_sub_field('under_content');            
             include 'blocks/main_view.php';
 
         elseif( get_row_layout() == 'work_first' ): 
-            $titleWorks = get_sub_field('title_works');
-            $descriptionWorks = get_sub_field('description_works');
-            $linkWorks = get_sub_field('link_works');
+            $category = get_sub_field('category');
+            $title = get_sub_field('title');
+            $image = get_sub_field('image');
+            $description = get_sub_field('description');
             include 'blocks/work_first.php';
 
         elseif( get_row_layout() == 'work_second' ): 
-            $titleWorks = get_sub_field('title_works');
-            $descriptionWorks = get_sub_field('description_works');
-            $linkWorks = get_sub_field('link_works');
-            include 'blocks/work_second.php'; 
+            $category = get_sub_field('category');
+            $title = get_sub_field('title');
+            $image = get_sub_field('image');
+            $description = get_sub_field('description');
+            include 'blocks/work_second.php';
 
         elseif( get_row_layout() == 'work_third' ): 
-            $titleWorks = get_sub_field('title_works');
-            $descriptionWorks = get_sub_field('description_works');
-            $linkWorks = get_sub_field('link_works');
-            include 'blocks/work_third.php';
-            
+            $category = get_sub_field('category');
+            $title = get_sub_field('title');
+            $image = get_sub_field('image');
+            $description = get_sub_field('description');
+            include 'blocks/work_third.php';   
             
         endif;
     

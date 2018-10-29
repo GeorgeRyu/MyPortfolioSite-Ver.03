@@ -2,7 +2,7 @@
 				<figure>
 					<a href="work03.html">
 						<span class="darkblue"></span>
-						<img class="front-page-3" src="images/work_03.jpg" alt="work-images">
+                        <img class="front-page-3" src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>">
 					</a>
 					<div class="rec rectangle-03"></div>
 				</figure>
@@ -11,14 +11,16 @@
 						<span class="text-link">More</span>
 						<span class="bg-link"></span>
 					</a>
-					<p class="type">Android app</p>
-					<br>
-					<h3 id="stretch3" class="title-work">
-						Greattractive
-					</h3>
-					<br>
-					<p class="explan-s">
-						Greattractive is an application that users can post works such as graphic design, pictures, and photos created by users. Also, if other users who saw the work are interested in the work, they can contact the creator directly and buy and sell the work.
-					</p>
+                    <p class="type">
+                        <?php echo $category; ?>
+                    </p>
+                    <br>
+                    <h3 id="stretch3" class="title-work">
+                        <?php echo $title; ?>
+                    </h3>
+                    <br>
+                    <p class="explan-s">
+                        <?php echo $description; ?>
+                    </p>
 				</div>
 			</article>
